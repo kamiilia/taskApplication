@@ -1,11 +1,12 @@
-<div *ngFor="let task of tasks">
+@for (task of tasks; track task) {
     <mat-list>
         <mat-list-item> {{task.title}} : {{task.description}}</mat-list-item>
         <mat-divider></mat-divider>
     </mat-list>
     <button style="margin : 1% 1%" (click)="removeTask(task)">Delete task</button>
     <button (click)="editTask(task)">Edit task</button>
-</div>
+
 <div>
 <button mat-button (click)="addNewTask()">Add new task</button>
 </div>
+  }

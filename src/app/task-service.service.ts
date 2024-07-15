@@ -18,7 +18,7 @@ export class TaskService {
     return this.httpClient.get<Task>(`http://localhost:3000/tasks/${id}`).pipe(catchError(this.erroHandler));
   }
 
-  postTask(task : any): Observable<Task> {
+  postTask(task : Task): Observable<Task> {
     return this.httpClient.post<Task>('http://localhost:3000/tasks', task).pipe(catchError(this.erroHandler));
   }
 

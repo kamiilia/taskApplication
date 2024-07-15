@@ -6,13 +6,13 @@ import { NgFor } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
 
 @Component({
-  selector: 'router-outlet',
+  selector: 'app-task-list',
   standalone: true,
   imports: [NgFor, MatListModule],
-  templateUrl: './task-liste.component.html',
-  styleUrl: './task-liste.component.scss'
+  templateUrl: './task-list.component.html',
+  styleUrl: './task-list.component.scss'
 })
-export class TaskListeComponent implements OnInit {
+export class TaskListComponent implements OnInit {
 
   tasks: Task[];
 
