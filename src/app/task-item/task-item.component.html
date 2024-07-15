@@ -1,10 +1,12 @@
+<div class="taskItem">
 <mat-label>Task details</mat-label>
-<mat-form-field class="full-width">
+<mat-form-field class="taskItem__title">
   <mat-label>Task title</mat-label>
   <input matInput [(ngModel)]="title" name="taskTitle" />
 </mat-form-field>
-<mat-form-field class="full-width">
+<mat-form-field class="taskItem__description">
   <mat-label>Task description</mat-label>
   <textarea matInput [(ngModel)]="description" name="taskDescription"></textarea>
 </mat-form-field>
-<button mat-button (click)="backToTasksList()">Update task !</button>
+<button mat-button (click)="backToTasksList()">Back to task list</button>
+</div>

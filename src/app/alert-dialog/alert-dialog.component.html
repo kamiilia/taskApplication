@@ -1,0 +1,13 @@
+<mat-dialog-content>
+    {{message}}
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close (click)="closeDialog()">
+        {{buttonback}}
+    </button>
+    @if (buttonDelete){
+    <button mat-raised-button color="primary" mat-dialog-close (click)="confirmDeletingTask()">
+        {{buttonDelete}}
+    </button>
+    }
+</mat-dialog-actions>

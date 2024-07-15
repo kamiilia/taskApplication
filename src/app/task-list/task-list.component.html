@@ -1,12 +1,13 @@
-@for (task of tasks; track task) {
+<div class="task">
+    @for (task of tasks; track task) {
     <mat-list>
-        <mat-list-item> {{task.title}} : {{task.description}}</mat-list-item>
-        <mat-divider></mat-divider>
+        <mat-list-item class="task__title">{{task.title}}</mat-list-item>
+        <mat-list-item class="task__description">{{task.description}}</mat-list-item>
     </mat-list>
-    <button style="margin : 1% 1%" (click)="removeTask(task)">Delete task</button>
-    <button (click)="editTask(task)">Edit task</button>
-
-<div>
-<button mat-button (click)="addNewTask()">Add new task</button>
+        <button class="task__button" (click)="removeTask(task)">Delete task</button>
+        <button class="task__button" (click)="rootingService.navigateTo('edit-task/',task.id)">Edit task</button>
+        <button class="task__button" mat-button (click)="rootingService.navigateTo('details-task/', task.id)">Task Details</button>
+        <mat-divider></mat-divider>
+    }
+    <button mat-button (click)="rootingService.navigateTo('new-task')">Add new task</button>
 </div>
-  }

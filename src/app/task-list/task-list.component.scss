@@ -1,0 +1,21 @@
+$font-style: italic;
+
+.task {
+    width: 35%;
+    margin-left: 35%;
+
+    &__title {
+        font-style: $font-style;
+        font-weight: bold;
+
+    }
+
+    &__description {
+        font-style: $font-style;
+        font-weight: lighter;
+    }
+
+    &__button {
+        margin: 1% 1%;
+    }
+}

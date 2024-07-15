@@ -1,0 +1,15 @@
+.taskForm {
+    width: 30%;
+    margin-left: 35%;
+
+    &__button__edit {
+        margin: 3% 10%;
+    }
+    &__title {
+        margin: 3% 3%;
+    }
+    &__description__edit{
+        margin-left: 15%;
+        margin-right: 20%;
+    }
+}

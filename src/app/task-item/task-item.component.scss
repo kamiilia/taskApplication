@@ -1,1 +1,12 @@
 
+.taskItem {
+    width: 30%;
+    margin-left: 35%;
+    &__title {
+        margin: 3% 3%;
+    }
+    &__description{
+        margin-left: 19%;
+        margin-right: 20%;
+    }
+}

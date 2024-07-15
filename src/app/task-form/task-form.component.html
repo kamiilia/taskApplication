@@ -1,10 +1,27 @@
-  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="full-width" >
-        <textarea matInput placeholder="Task title" formControlName="taskTitle"></textarea>
-    </mat-form-field>
-  
-    <mat-form-field class="full-width" >
-      <textarea matInput placeholder="Task description" formControlName="taskDescription"></textarea>
-    </mat-form-field>
-    <button mat-button type="submit"> Create new task !</button>
-  </form>
+@if (actualUrl.includes('/new-task')) {
+<form class="taskForm" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="taskForm__title">
+    <textarea matInput placeholder="Task title" formControlName="taskTitleForm"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Task description" formControlName="taskDescriptionForm"></textarea>
+  </mat-form-field>
+  <button mat-button type="submit"> Create new task !</button>
+</form>
+}
+@if (actualUrl.includes('/edit-task')){
+<div class="taskForm">
+  <mat-label>Edit task</mat-label>
+  <mat-form-field class="taskForm__title">
+    <mat-label>Task title</mat-label>
+    <input matInput [(ngModel)]="taskTitleForm" name="taskTitleForm" />
+  </mat-form-field>
+  <mat-form-field class="taskForm__description__edit">
+    <mat-label>Task description</mat-label>
+    <textarea matInput [(ngModel)]="taskDescriptionForm" name="taskDescriptionForm"></textarea>
+  </mat-form-field>
+  <button class="taskForm_button_edit" mat-button (click)="updateTasksList()">Update task !</button>
+</div>
+}
+<button class="taskForm_button_edit" mat-button (click)="backToTasksList()">Back to task list</button>
