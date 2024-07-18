@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TaskService } from '../../services/task-service.service';
+import { TaskService } from '../../../services/task-service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Task } from '../../models/task';
-import { RoutingService } from '../../services/routing.service';
+import { Task } from '../../../models/task';
+import { RoutingService } from '../../../services/routing.service';
 
 @Component({
   selector: 'app-task-item',

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { TaskListComponent } from './pages/task-list/task-list.component';
-import { TaskFormComponent } from './pages/task-form/task-form.component';
-import { TaskItemComponent } from './pages/task-item/task-item.component';
+import { TaskListComponent } from './pages/task/task-list/task-list.component';
+import { TaskFormComponent } from './pages/task/task-form/task-form.component';
+import { TaskItemComponent } from './pages/task/task-item/task-item.component';
 
 export const routes: Routes = [
     {path: "", redirectTo: 'task-list', pathMatch: 'full' },

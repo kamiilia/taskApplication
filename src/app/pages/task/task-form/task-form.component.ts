@@ -3,13 +3,13 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TaskService } from '../../services/task-service.service';
+import { TaskService } from '../../../services/task-service.service';
 import { FormBuilder } from '@angular/forms';
-import { Task } from '../../models/task';
-import { RoutingService } from '../../services/routing.service';
+import { Task } from '../../../models/task';
+import { RoutingService } from '../../../services/routing.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from '../../shared/alert-dialog/alert-dialog.component';
+import { AlertDialogComponent } from '../../../shared/alert-dialog/alert-dialog.component';
 
 @Component({
   selector: 'app-task-form',

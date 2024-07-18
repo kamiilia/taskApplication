@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../services/task-service.service';
-import { Task } from '../../models/task';
+import { TaskService } from '../../../services/task-service.service';
+import { Task } from '../../../models/task';
 import { NgFor } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
-import { RoutingService } from '../../services/routing.service';
+import { RoutingService } from '../../../services/routing.service';
 import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from '../../shared/alert-dialog/alert-dialog.component';
+import { AlertDialogComponent } from '../../../shared/alert-dialog/alert-dialog.component';
 
 @Component({
   selector: 'app-task-list',
