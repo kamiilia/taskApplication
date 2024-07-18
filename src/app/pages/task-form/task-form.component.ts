@@ -3,13 +3,13 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TaskService } from '../services/task-service.service';
+import { TaskService } from '../../services/task-service.service';
 import { FormBuilder } from '@angular/forms';
-import { Task } from '../models/task';
-import { RootingService } from '../services/rooting.service';
+import { Task } from '../../models/task';
+import { RoutingService } from '../../services/routing.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from '../alert-dialog/alert-dialog.component';
+import { AlertDialogComponent } from '../../alert-dialog/alert-dialog.component';
 
 @Component({
   selector: 'app-task-form',
@@ -28,7 +28,7 @@ export class TaskFormComponent implements OnInit { // formGroup
     taskDescriptionForm: new FormControl(''),
   });
   constructor(private router: Router, private readonly taskService: TaskService, private formBuilder: FormBuilder, private readonly activatedRoute: ActivatedRoute,
-    private readonly rootingService: RootingService, private snackBar: MatSnackBar, private dialogPopUp: MatDialog) {
+    private readonly routingService: RoutingService, private snackBar: MatSnackBar, private dialogPopUp: MatDialog) {
     this.taskForm = this.formBuilder.group({ taskTitleForm: ['', Validators.required], taskDescriptionForm: ['', Validators.required] });
   }
 
@@ -57,7 +57,7 @@ export class TaskFormComponent implements OnInit { // formGroup
           this.snackBar.open("task created successfully", "", {
             duration: 2000,
           });
-          this.rootingService.navigateTo('task-list/');
+          this.routingService.goToTaskList();
         }
       });
     } else {
@@ -99,7 +99,7 @@ export class TaskFormComponent implements OnInit { // formGroup
     }
   }
   backToTasksList() {
-    this.rootingService.navigateTo('task-list/');
+    this.routingService.goToTaskList();
   }
 
 }

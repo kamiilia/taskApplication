@@ -1,0 +1,13 @@
+<div class="task">
+    @for (task of tasks; track task) {
+    <mat-list>
+        <mat-list-item class="task__title">{{task.title}}</mat-list-item>
+        <mat-list-item class="task__description">{{task.description}}</mat-list-item>
+    </mat-list>
+    <button class="task__button" (click)="removeTask(task)">Delete task</button>
+    <button class="task__button" (click)="editTask(task)">Edit task</button>
+    <button class="task__button" mat-button (click)="taskDetails(task)">Task Details</button>
+    <mat-divider></mat-divider>
+    }
+    <button mat-button (click)="createNewTask()">Add new task</button>
+</div>

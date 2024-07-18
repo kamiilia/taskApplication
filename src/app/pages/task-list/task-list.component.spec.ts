@@ -4,9 +4,9 @@ import { TaskListComponent } from './task-list.component';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ActivatedRoute, Data } from '@angular/router';
-import { TaskService } from '../services/task-service.service';
+import { TaskService } from '../../services/task-service.service';
 import { of } from 'rxjs';
-import { Task } from '../models/task';
+import { Task } from '../../models/task';
 
 describe('TaskListComponent', () => {
   let component: TaskListComponent;

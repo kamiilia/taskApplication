@@ -1,1 +1,1 @@
-
+export const taskApiUrl= 'http://localhost:3000/tasks/';

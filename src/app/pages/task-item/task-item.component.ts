@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TaskService } from '../services/task-service.service';
+import { TaskService } from '../../services/task-service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Task } from '../models/task';
-import { RootingService } from '../services/rooting.service';
+import { Task } from '../../models/task';
+import { RoutingService } from '../../services/routing.service';
 
 @Component({
   selector: 'app-task-item',
@@ -20,7 +20,7 @@ export class TaskItemComponent implements OnInit {
   title: string;
   description: string;
   task: Task;
-  constructor(private readonly rootingService: RootingService, private readonly taskService: TaskService, private readonly activatedRoute: ActivatedRoute) { }
+  constructor(private readonly routingService: RoutingService, private readonly taskService: TaskService, private readonly activatedRoute: ActivatedRoute) { }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       params => {
@@ -36,6 +36,6 @@ export class TaskItemComponent implements OnInit {
   }
 
   backToTasksList() {
-    this.rootingService.navigateTo('task-list/');
+    this.routingService.goToTaskList();
   }
 }
