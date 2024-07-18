@@ -9,7 +9,7 @@ import { Task } from '../../models/task';
 import { RoutingService } from '../../services/routing.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from '../../alert-dialog/alert-dialog.component';
+import { AlertDialogComponent } from '../../shared/alert-dialog/alert-dialog.component';
 
 @Component({
   selector: 'app-task-form',
